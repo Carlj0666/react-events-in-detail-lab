@@ -5,13 +5,12 @@ import React, { Component } from 'react'
 export default class CoordinatesButton extends Component {
   
   handleClick = event => {
-    console.log("ANYTHING!!!")
-  
+    this.props.onReceiveCoordinates([event.clientX, event.clientY])
   }
-
   
   render() {
-    return <button onClick={this.handleClick}>Button</button>
+
+    return <button onClick={this.handleClick}>CoordButton</button>
   }
 
 }
